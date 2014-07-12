@@ -3,8 +3,7 @@
 #and the original txt file is over 2 million rows in length, we pull just the necessary rows.
 #Note that the dates are given as dd/mm/yyyy in the original dataset.
 
-#Here I assume that the file household_power_consumption.txt is located within the working directory, so only relative paths
-#are given for this .txt file.
+#Here I assume that the file household_power_consumption.txt is located within the working directory.
 
 first5rows<-read.table("household_power_consumption.txt", header=TRUE, sep=";", nrows=5, stringsAsFactors=FALSE)
 classes<-sapply(first5rows, class)

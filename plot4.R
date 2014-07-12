@@ -2,8 +2,7 @@
 #Because only data for 2007-02-01 and 2007-02-02 (2 days) are needed, 
 #and the original txt file is over 2 million rows in length, we pull just the necessary rows.
 #Note that the dates are given as dd/mm/yyyy in the original dataset.
-#Here I assume that the household_power_consumption.txt is in the working directory, so I use
-#relative paths for this file in the script.
+#Here I assume that the household_power_consumption.txt is in the working directory.
 #The script creates a 2x2 matrix of plots (four plots in all), and outputs them as a single .png file.
 
 first5rows<-read.table("household_power_consumption.txt", header=TRUE, sep=";", nrows=5, stringsAsFactors=FALSE)

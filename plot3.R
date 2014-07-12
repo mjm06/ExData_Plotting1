@@ -5,8 +5,7 @@
 #The script plots energy sub metering over time for three 'zones' of a house (kitchen appliances,
 #laundry appliances, and water heater and A/C), on the same x-y axes. 
 
-#Here I assume that household_power_consumption.txt is housed in the working directory, so only relative
-#path are used for this .txt file in the script.
+#Here I assume that household_power_consumption.txt is housed in the working directory.
 first5rows<-read.table("household_power_consumption.txt", header=TRUE, sep=";", nrows=5, stringsAsFactors=FALSE)
 classes<-sapply(first5rows, class)
 all.data<-read.table("household_power_consumption.txt", header=TRUE, sep=";", stringsAsFactors=FALSE, colClasses=classes, na.strings="?")
